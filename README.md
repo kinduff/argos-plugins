@@ -1,4 +1,4 @@
-# argos-plugins
+# My Argos Plugins
 
 This is my personal collection of [Argos](https://github.com/p-e-w/argos/) plugins ([Bitbar](https://github.com/matryer/bitbar) for OS X, if you're into that).
 
