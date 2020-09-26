@@ -28,7 +28,7 @@ for status_url in ${status_urls[@]}; do
   bottom_status+=("${icon} ${name} - ${description} | href='${url}'")
 done
 
-printf '%s   ' "${top_status[@]}"
+printf '%s ' "${top_status[@]}"
 echo
 echo "---"
 printf '%s\n' "${bottom_status[@]}"
