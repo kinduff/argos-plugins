@@ -19,7 +19,7 @@ function displaytime {
 today=`date +%F`
 api_key=`awk -F'[ ="]+' '$1 == "api_key" { print $2 }' $HOME/.wakatime.cfg`
 endpoint="https://wakatime.com/api/v1/users/current/durations?date=${today}&api_key=${api_key}"
-total=`curl --silent $endpoint | jq '[.data[].duration] | add' || echo 0`
+total=`curl --silent $endpoint | jq -r 'try ([.data[].duration] | add) catch 0'`
 
 echo "🐴 Coding: $(displaytime ${total%.*})"
 echo "---"
