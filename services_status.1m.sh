@@ -24,7 +24,7 @@ for status_url in ${status_urls[@]}; do
 
   [[ "$status" -eq 0 ]] && icon="🔴"
 
-  top_status+=("${icon} ${name}")
+  top_status+=("${icon}")
   bottom_status+=("${icon} ${name} - ${description} | href='${url}'")
 done
 
