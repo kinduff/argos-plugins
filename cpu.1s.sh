@@ -14,7 +14,7 @@ function formatAvg () {
     color="#68b382"
   fi
 
-  printf "<span color='%s'>%.2f%%</span>" $color "$1"
+  printf "<span color='%s' font='monospace'>%.2f%%</span>" $color "$1"
 }
 
 allCores=$(top -bn1 | grep "Cpu" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1}')
@@ -24,7 +24,7 @@ echo "CPU: $(formatAvg "$avg")"
 echo "---"
 INDEX=1
 for i in $allCores; do
-  echo "Core $INDEX: $(formatAvg "$i")"
+  echo "Core $INDEX: <span font='monospace'>$(formatAvg "$i")</span>"
   (( INDEX++ ))
 done
 echo "---"
