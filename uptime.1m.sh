@@ -5,7 +5,7 @@
 # <bitbar.author.github>kinduff</bitbar.author.github>
 # <bitbar.version>1</bitbar.version>
 
-total=`uptime -p | sed -r 's/(day)(s?)/d/g; s/(hour)(s?)/h/g; s/(minute)(s?)/m/g; s/up//g; s/ //g; s/,/ /g'`
+total=`uptime -p | sed -r 's/(month)(s?)/m/g; s/(week)(s?)/w/g; s/(day)(s?)/d/g; s/(hour)(s?)/h/g; s/(minute)(s?)/m/g; s/up//g; s/ //g; s/,/ /g'`
 
 echo "🔝 ${total}"
 echo "---"
